@@ -15,25 +15,20 @@ namespace PhoneBook
         public void AddContacts(string name, string phone)
         {
             bool flag = false;
+            int place;
 
             for (int i = 0; i < this.contacts.Length; i++)
             {
                 if (this.contacts[i].GetName() == name)
                 {
                     flag = true;
+                    place = i;
                 }
             }
 
             if (flag)
             {
-                Contact[] newContacts1 = new Contact[this.contacts.Length + 1];
-                Contact c2 = new Contact(phone, phone);
-                newContacts1[newContacts1.Length - 1] = c2;
-                for (int i = 0; i < this.contacts.Length; i++)
-                {
-                    newContacts1[i] = this.contacts[i];
-                }
-                this.contacts = newContacts1;
+                this.contacts[i].setName(name);
             }
 
             else
