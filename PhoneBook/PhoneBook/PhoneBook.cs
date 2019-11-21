@@ -28,7 +28,7 @@ namespace PhoneBook
 
             if (flag)
             {
-                this.contacts[i].setName(name);
+                this.contacts[i].SetName(name);
             }
 
             else
